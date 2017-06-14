@@ -10,5 +10,6 @@ pip install praw
 
 ## Instructions
 1. Clone this repo where you need to pictures to be.
-2. Edit the subreddit in redditwall.py
-3. Run redditwall.py
+2. Enter OAuth details in config.py
+3. Edit the subreddit in redditwall.py
+4. Run redditwall.py
