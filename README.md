@@ -9,6 +9,6 @@ pip install praw
 2. wget to download the images. You can get it from your appropriate package manager.
 
 ## Instructions
-1. Clone this repo you need to pictures to be.
+1. Clone this repo where you need to pictures to be.
 2. Edit the subreddit in redditwall.py
 3. Run redditwall.py
