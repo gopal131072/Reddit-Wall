@@ -11,7 +11,7 @@ reddit = praw.Reddit(username = config.username,
             user_agent = "Pull wallpapers from /r/wallpapers")
 print("Logged in successfully \o/")
 
-topPosts = reddit.subreddit('animewallpaper').top(limit=10)
+topPosts = reddit.subreddit('wallpapers').hot(limit=10)
 imagePost = None
 for post in topPosts:
     if imagePost is None:

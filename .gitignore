@@ -1,0 +1,9 @@
+##Actual config
+config2.py
+
+##Downloaded walls
+*.jpg
+*.png
+
+##All text files
+*.txt
