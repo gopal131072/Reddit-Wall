@@ -11,7 +11,8 @@ reddit = praw.Reddit(username = config.username,
             user_agent = "Pull wallpapers from /r/wallpapers")
 print("Logged in successfully \o/")
 
-topPosts = reddit.subreddit('wallpapers').hot(limit=10)
+
+topPosts = reddit.subreddit(config.subreddit).hot(limit=25)
 imagePost = None
 for post in topPosts:
     if imagePost is None:
@@ -23,7 +24,10 @@ for post in topPosts:
             imagePost = url
             print("URL = " + imagePost)
     if imagePost is not None:
-        os.system("wget " + imagePost)
+        imagepath = imagePost
+        imagepath = imagepath.replace("https://i.redd.it/","")
+        imagepath = imagepath.replace("http://i.imgur.com/","")
+        os.system("wget -O " + config.imgDIR +imagepath+" " + imagePost)
         imagePost = None
     else:
         print("No images found.")
